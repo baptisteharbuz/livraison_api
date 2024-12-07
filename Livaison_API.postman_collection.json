@@ -1,0 +1,355 @@
+{
+	"info": {
+		"_postman_id": "88f7e7b7-c7ee-42ab-a0a0-8ccf25b77bd0",
+		"name": "Livaison_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30526103"
+	},
+	"item": [
+		{
+			"name": "user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/demo/api/utilisateurs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"demo",
+						"api",
+						"utilisateurs"
+					]
+				}
+			},
+			"response": [
+				{
+					"id_utilisateur": 2,
+					"mail": "admin@admin.fr",
+					"password": "admin",
+					"fk_role": 1,
+					"dateCreation": 1733488032000
+				},
+				{
+					"id_utilisateur": 4,
+					"mail": "user@user.com",
+					"password": "mdp",
+					"fk_role": 2,
+					"dateCreation": 1733488662000
+				},
+				{
+					"id_utilisateur": 5,
+					"mail": "comercial@comercial.com",
+					"password": "mdp",
+					"fk_role": 3,
+					"dateCreation": 1733488726000
+				}
+			]
+		},
+		{
+			"name": "etat",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/demo/api/etats",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"demo",
+						"api",
+						"etats"
+					]
+				}
+			},
+			"response": [
+				{
+					"id_etat": 1,
+					"labelEtat": "En attente"
+				},
+				{
+					"id_etat": 2,
+					"labelEtat": "En cours"
+				},
+				{
+					"id_etat": 3,
+					"labelEtat": "Livré"
+				},
+				{
+					"id_etat": 4,
+					"labelEtat": "Annulé"
+				}
+			]
+		},
+		{
+			"name": "role",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/demo/api/etats",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"demo",
+						"api",
+						"etats"
+					]
+				}
+			},
+			"response": [
+				{
+					"id_role": 1,
+					"labelEtat": "admin"
+				},
+				{
+					"id_role": 3,
+					"labelEtat": "commerçant"
+				},
+				{
+					"id_role": 2,
+					"labelEtat": "utilisateur"
+				}
+			]
+		},
+		{
+			"name": "livraison",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/demo/api/etats",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"demo",
+						"api",
+						"etats"
+					]
+				}
+			},
+			"response": [
+				{
+					"id_livraison": 1,
+					"adresse_de_depart": "123 Rue A",
+					"destination": "456 Rue B",
+					"details_du_colis": "Petit colis fragile",
+					"date_creation": 1733146323000,
+					"fk_etat": 1
+				},
+				{
+					"id_livraison": 2,
+					"adresse_de_depart": "123 Rue Exemple",
+					"destination": "456 Avenue Exemple",
+					"details_du_colis": "Colis fragile",
+					"date_creation": 1733500582000,
+					"fk_etat": 1
+				},
+				{
+					"id_livraison": 3,
+					"adresse_de_depart": "12 rue des test",
+					"destination": "56 avenue du test",
+					"details_du_colis": "Colis lourd",
+					"date_creation": 1733582474000,
+					"fk_etat": 1
+				}
+			]
+		},
+		{
+			"name": "livraison-livreur",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/demo/api/etats",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"demo",
+						"api",
+						"etats"
+					]
+				}
+			},
+			"response": [
+				{
+					"id_livraison_livreur": 1,
+					"fk_livreur": 1,
+					"fk_livraison": 1
+				},
+				{
+					"id_livraison_livreur": 2,
+					"fk_livreur": 3,
+					"fk_livraison": 2
+				}
+			]
+		},
+		{
+			"name": "livreur",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/demo/api/etats",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"demo",
+						"api",
+						"etats"
+					]
+				}
+			},
+			"response": [
+				{
+					"id_livreur": 1,
+					"nom": "John",
+					"prenom": "Doe",
+					"disponible": false
+				},
+				{
+					"id_livreur": 2,
+					"nom": "Jane",
+					"prenom": "Doe",
+					"disponible": true
+				}
+			]
+		},
+		{
+			"name": "user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"mail\": \"admin@admin.com\",\n    \"password\": \"mdp\",\n    \"fkRole\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/utilisateurs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"utilisateurs"
+					]
+				}
+			},
+			"response": ["Utilisateur créé avec succès"]
+		},
+		{
+			"name": "livreur",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nom\": \"John\",\n  \"prenom\": \"Doe\",\n  \"disponible\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/demo/api/livreurs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"demo",
+						"api",
+						"livreurs"
+					]
+				}
+			},
+			"response": ["Livreur créé avec succès"]
+		},
+		{
+			"name": "livraison",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"adresse_de_depart\": \"123 Rue Exemple\",\n  \"destination\": \"456 Avenue Exemple\",\n  \"details_du_colis\": \"Colis fragile\",\n  \"fk_etat\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/demo/api/livraisons",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"demo",
+						"api",
+						"livraisons"
+					]
+				}
+			},
+			"response": ["Livraison créée avec succès"]
+		},
+		{
+			"name": "relation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"fk_livraison\": 1,\n  \"fk_livreur\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/demo/api/livraison_livreurs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"demo",
+						"api",
+						"livraison_livreurs"
+					]
+				}
+			},
+			"response": ["Relation Livraison-Livreur créée avec succès"]
+		}
+	]
+}
